@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delivery-app</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/matryoshka.png" />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+
+    <script src="script.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/template.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/icons/matryoshka.png" alt="logo" />
+      <h1>Matryoshka</h1>
+    </header>
+    <main>
+      <section id="content">
+        <div class="kitchen-intro">
+          <img
+            class="pancake-png"
+            src="./assets/icons/pfannkuchen.png"
+            alt="pancake-png"
+          />
+          <img
+            class="main-picture"
+            src="./assets/images/slavic_desk"
+            alt="main-img"
+          />
+          <div>
+            <h3 class="description">
+              Welcome to Matryoshka – A Taste of Slavic Home Cooking!
+            </h3>
+            <p class="rating">Restaurant rating (4,9 out of 5)</p>
+          </div>
+          <nav class="dishes-nav-line">
+            <img
+              class="arrow-png"
+              src="./assets/icons/arrowRight.png"
+              alt="arrow"
+            />
+            <a href="#entrees"><p class="nav-style">Entrées</p></a>
+            <a href="#sides"><p class="nav-style">Sides</p></a>
+            <a href="#deserts"><p class="nav-style">Deserts</p></a>
+          </nav>
+        </div>
+        <section class="templates-output-section">
+          <img
+            class="template-imgs"
+            src="./assets/images/slavic_pelmeni"
+            alt="pelmeni-png"
+          />
+          <h2>Entrées</h2>
+          <template id="dishes-template-output"></template>
+          <img
+            class="template-imgs"
+            src="./assets/images/slavic_buckwheat"
+            alt="pelmeni-png"
+          />
+          <h2>Sides</h2>
+          <template id="sides-template-output"></template>
+          <img
+            class="template-imgs"
+            src="./assets/images/slavic_medovik"
+            alt="pelmeni-png"
+          />
+          <h2>Deserts</h2>
+          <template id="deserts-template-output"></template>
+        </section>
+      </section>
+      <section id="basket-wrapper">
+        <div id="empty-basket">
+          <div class="empty-basket-title-wrapper">
+            <h2>Basket</h2>
+          </div>
+          <div class="empty-basket-alert">
+            <img
+              class="bag-icon"
+              src="./assets/icons/shoppingBag.png"
+              alt="bag-png"
+            />
+            <p class="basket-text">
+              Choose delicious dishes from the menu and order your meal.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a target="_blank" href="https://icons8.com/icon/102308/menu">Menu</a>
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </div>
+      <div>
+        <a href="./impressum_deliveryApp.pdf"></a>
+        <a href="./agb.html"></a>
+      </div>
+    </footer>
+    <button class="btn btn-primary" id="mobile-footer-basket">BASKET</button>
+  </body>
+</html>

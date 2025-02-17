@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 139, 0);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  z-index: 1;
+  background-color: white;
+  color: rgba(30, 0, 50, 1);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 32px;
+  gap: 16px;
+  height: 144px;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(255 139 0);
+}
+
+footer {
+  height: 160px;
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+}
+hr {
+  width: 100%;
+}
