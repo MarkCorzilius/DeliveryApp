@@ -1,7 +1,7 @@
 function getDishesTemplate(itemIndex) {
   let dish = russianMenu[0].items[itemIndex];
   return `<div class="dish-wrapper">
-                <div class="dish">
+                <div class="dish" onclick="addPortion(0, ${itemIndex})">
                   <h2 class="dish-name">${dish.name}</h2>
                   <p class="dish-description">${dish.description}</p>
                   <p class="dish-price">${formatPrice(dish.price) + "€"}</p>
@@ -17,7 +17,7 @@ function getDishesTemplate(itemIndex) {
 function getSidesTemplate(itemIndex) {
   let side = russianMenu[1].items[itemIndex];
   return `<div class="dish-wrapper">
-                <div class="dish">
+                <div class="dish" onclick="addPortion(1, ${itemIndex})">
                   <h2 class="dish-name">${side.name}</h2>
                   <p class="dish-description">${side.description}</p>
                   <p class="dish-price">${formatPrice(side.price) + "€"}</p>
@@ -33,7 +33,7 @@ function getSidesTemplate(itemIndex) {
 function getDessertsTemplate(itemIndex) {
   let desert = russianMenu[2].items[itemIndex];
   return `<div class="dish-wrapper">
-                <div class="dish">
+                <div class="dish" onclick="addPortion(2, ${itemIndex})">
                   <h2 class="dish-name">${desert.name}</h2>
                   <p class="dish-description">${desert.description}</p>
                   <p class="dish-price">${formatPrice(desert.price) + "€"}</p>
@@ -54,26 +54,31 @@ function getBasketDishesTemplate(index) {
               <div class="amount-control">
                 <img
                   id=""
-                  onclick=""
+                  onclick="changePortionAmount(${index}, 'decrement')"
                   src="./assets/icons/deleteFood.png"
-                  alt="remove_one"
+                  alt="remove-one"
                 />
                 <p id="">${menuItem.amount + "x"}</p>
                 <img
-                  id="" onclick=""
+                  id="" onclick="changePortionAmount(${index}, 'increment')"
                   src="./assets/icons/addFood.png"
-                  alt="add_more"
+                  alt="add-more"
                 />
               </div>
               <p class="basket-price">${formatPrice(menuItem.price) + "€"}</p>
-              <img
-                onclick=""
+              <img id="toTrash"
+                onclick="deleteAllPortions(${index})"
                 src="./assets/icons/trash.png"
-                alt="delete_all"
+                alt="delete-all"
               />
             </div>
           </div>
 `;
+}
+
+function getEmptyBasketTemplate() {
+  return `     <img class="bag-icon" src="./assets/icons/shoppingBag.png" alt="bag-png" />
+            <p class="basket-text">Choose delicious dishes from the menu and order your meal.</p>`;
 }
 
 function getPriceSummaryTemplate() {
@@ -93,5 +98,8 @@ function getPriceSummaryTemplate() {
       <p>${formatPrice(totalCost) + "€"}</p>
     </div>
   </div>
+  <div class="d-grid gap-2">
+  <button class="btn btn-primary" id="paymentBtn" type="button">payment</button>
+</div>
 </div>`;
 }

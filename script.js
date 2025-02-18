@@ -68,11 +68,12 @@ function isAllAmountZero() {
       allZero = false;
       break;
     }
-    if (allZero) {
-      basketRef.style.display = "flex";
-    } else {
-      basketRef.style.display = "none";
-    }
+  }
+  if (allZero) {
+    basketRef.innerHTML = "";
+    basketRef.innerHTML = getEmptyBasketTemplate();
+    renderOrderSummary();
+    renderBasketDishes();
   }
 }
 
@@ -85,22 +86,26 @@ function renderBasketDishes() {
       basketRef.innerHTML += getBasketDishesTemplate(index);
     }
   }
+  if (basket.length === 0 || basket.every((item) => item.amount === 0)) {
+    basketRef.innerHTML = getEmptyBasketTemplate();
+  }
 }
 
 function renderOrderSummary() {
   let contentRef = document.getElementById("order-summary-template-output");
-  let zeroTest = true;
+  let allZero = true;
 
   for (let index = 0; index < basket.length; index++) {
     if (basket[index].amount > 0) {
-      zeroTest = false;
+      allZero = false;
       break;
     }
   }
-
-  if (!zeroTest) {
+  if (!allZero) {
     contentRef.innerHTML = getPriceSummaryTemplate();
-  } else contentRef.innerHTML = "";
+  } else {
+    contentRef.innerHTML = "";
+  }
 }
 
 function calcSummaryPrices() {
@@ -109,4 +114,23 @@ function calcSummaryPrices() {
     subtotalCost += basket[index].amount * basket[index].price;
   }
   totalCost = subtotalCost + deliveryCost;
+}
+
+function deleteAllPortions(index) {
+  basket[index].amount = 0;
+  updateUI();
+}
+
+function changePortionAmount(index, action) {
+  let item = basket[index];
+
+  switch (action) {
+    case "increment":
+      item.amount++;
+      break;
+    case "decrement":
+      item.amount--;
+      break;
+  }
+  updateUI();
 }

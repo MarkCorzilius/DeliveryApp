@@ -19,7 +19,6 @@
   align-items: center;
   width: 100%;
   height: 700px;
-  overflow-y: auto;
   position: sticky;
   top: 144px;
 }
@@ -55,6 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
 }
 
 .basket-dish {
@@ -118,4 +118,5 @@
   display: flex;
   justify-content: space-between;
   color: rgb(0, 0, 0);
+  margin-bottom: 32px;
 }

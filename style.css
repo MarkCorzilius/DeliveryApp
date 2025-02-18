@@ -19,10 +19,11 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 144px;
+  top: 160px;
   display: flex;
   height: 104px;
   width: auto;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.9));
 }
 
 .kitchen-intro {
@@ -37,6 +38,7 @@
   color: rgb(255 139 0);
   font-size: 32px;
   padding-left: 16px;
+  margin: 16px 0px 24px;
 }
 
 .description {
@@ -104,7 +106,11 @@
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  margin-left: 16px;
+  padding-left: 16px;
+}
+
+.dish:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .add-to-basket-button {
