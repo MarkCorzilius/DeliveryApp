@@ -16,7 +16,10 @@
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 144px; /* Höhe deiner Navbar */
+}
 body {
   width: 100%;
   min-height: 100vh;

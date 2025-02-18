@@ -22,7 +22,7 @@
     <script src="./scripts/data.js"></script>
     <script src="./scripts/template.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <img src="./assets/icons/matryoshka.png" alt="logo" />
       <h1>Matryoshka</h1>
@@ -52,33 +52,36 @@
               src="./assets/icons/arrowRight.png"
               alt="arrow"
             />
-            <a href="#entrees"><p class="nav-style">Entrées</p></a>
-            <a href="#sides"><p class="nav-style">Sides</p></a>
-            <a href="#deserts"><p class="nav-style">Deserts</p></a>
+            <a href="#dishes-part-start"><p class="nav-style">Entrées</p></a>
+            <a href="#sides-part-start"><p class="nav-style">Sides</p></a>
+            <a href="#deserts-part-start"><p class="nav-style">Deserts</p></a>
           </nav>
         </div>
         <section class="templates-output-section">
           <img
+            id="dishes-part-start"
             class="template-imgs"
             src="./assets/images/slavic_pelmeni"
             alt="pelmeni-png"
           />
           <h2>Entrées</h2>
-          <template id="dishes-template-output"></template>
+          <div id="dishes-template-output"></div>
           <img
+            id="sides-part-start"
             class="template-imgs"
             src="./assets/images/slavic_buckwheat"
             alt="pelmeni-png"
           />
           <h2>Sides</h2>
-          <template id="sides-template-output"></template>
+          <div id="sides-template-output"></div>
           <img
+            id="deserts-part-start"
             class="template-imgs"
             src="./assets/images/slavic_medovik"
             alt="pelmeni-png"
           />
           <h2>Deserts</h2>
-          <template id="deserts-template-output"></template>
+          <div id="deserts-template-output"></div>
         </section>
       </section>
       <section id="basket-wrapper">
