@@ -9,26 +9,22 @@ let russianMenu = [
       {
         name: "Borsch",
         price: 8.99,
-        description:
-          "A traditional beet soup served hot or cold, often with sour cream.",
+        description: "A traditional beet soup served hot or cold, often with sour cream.",
       },
       {
         name: "Pelmeni",
         price: 10.99,
-        description:
-          "Dumplings filled with minced meat, usually served with butter or sour cream.",
+        description: "Dumplings filled with minced meat, usually served with butter or sour cream.",
       },
       {
         name: "Beef Stroganoff",
         price: 12.99,
-        description:
-          "Tender beef strips in a creamy mushroom sauce, often served with pasta or rice.",
+        description: "Tender beef strips in a creamy mushroom sauce, often served with pasta or rice.",
       },
       {
         name: "Olivie Salad",
         price: 7.49,
-        description:
-          "A classic Russian potato salad with eggs, pickles, peas, and mayonnaise.",
+        description: "A classic Russian potato salad with eggs, pickles, peas, and mayonnaise.",
       },
       {
         name: "Blini",
@@ -38,20 +34,17 @@ let russianMenu = [
       {
         name: "Shchi",
         price: 9.49,
-        description:
-          "A cabbage soup with meat, potatoes, and carrots, served hot.",
+        description: "A cabbage soup with meat, potatoes, and carrots, served hot.",
       },
       {
         name: "Pirozhki",
         price: 5.99,
-        description:
-          "Baked or fried pastries filled with meat, potatoes, or cabbage.",
+        description: "Baked or fried pastries filled with meat, potatoes, or cabbage.",
       },
       {
         name: "Solyanka",
         price: 11.49,
-        description:
-          "A thick, sour soup made with pickles, olives, and assorted meats.",
+        description: "A thick, sour soup made with pickles, olives, and assorted meats.",
       },
     ],
   },
@@ -81,14 +74,12 @@ let russianMenu = [
       {
         name: "Vareniki with Cherries",
         price: 7.49,
-        description:
-          "Dumplings filled with sweet cherries, served with sour cream.",
+        description: "Dumplings filled with sweet cherries, served with sour cream.",
       },
       {
         name: "Zefir",
         price: 5.99,
-        description:
-          "A fruit-flavored, airy confection similar to marshmallows.",
+        description: "A fruit-flavored, airy confection similar to marshmallows.",
       },
       {
         name: "Syrniki",
@@ -113,8 +104,7 @@ let russianMenu = [
       {
         name: "Pickled Cucumbers",
         price: 5.49,
-        description:
-          "Traditional Russian-style pickled cucumbers with garlic and dill.",
+        description: "Traditional Russian-style pickled cucumbers with garlic and dill.",
       },
       {
         name: "Kasha",
@@ -124,14 +114,12 @@ let russianMenu = [
       {
         name: "Black Bread",
         price: 2.99,
-        description:
-          "Dense, dark rye bread, often served with soups or spreads.",
+        description: "Dense, dark rye bread, often served with soups or spreads.",
       },
       {
         name: "Herring under a Fur Coat",
         price: 6.99,
-        description:
-          "A layered salad with herring, potatoes, beets, and mayonnaise.",
+        description: "A layered salad with herring, potatoes, beets, and mayonnaise.",
       },
       {
         name: "Mushroom Julienne",

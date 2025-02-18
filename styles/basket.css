@@ -11,16 +11,19 @@
   border-right: 1px solid rgb(195, 195, 195);
   box-shadow: -5px 0 10px rgba(128, 128, 128, 0.5);
 }
-#empty-basket {
+
+.empty-basket {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 700px;
+  overflow-y: auto;
   position: sticky;
   top: 144px;
 }
+
 .empty-basket-title-wrapper {
   width: 100%;
   border-bottom: 1px solid rgb(195, 195, 195);
@@ -31,6 +34,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .basket-text {
   width: 100%;
   max-width: 320px;
@@ -46,8 +50,72 @@
   width: 56px;
   margin-bottom: 16px;
 }
-.empty-basket-alert {
+
+#basket-dishes-output {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.basket-dish {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.basket-dish h4 {
+  padding-left: 16px;
+}
+
+.cart-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px 0px;
+  gap: 48px;
+}
+
+.amount-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.basket-dish img {
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+}
+
+.basket-price {
+  color: rgb(255 139 0);
+}
+
+.cost-breakdown-wrapper {
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.subtotal-price {
+  padding: 16px 16px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(160, 160, 160);
+}
+
+.delivery-price {
+  padding: 8px 16px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(160, 160, 160);
+  gap: 72px;
+}
+
+.total-price {
+  padding: 16px 16px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(0, 0, 0);
 }
