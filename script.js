@@ -1,7 +1,7 @@
 function init() {
-  renderDishes();
-  renderSides();
-  renderDesserts();
+  renderMenu(0, "dishes-template-output", getDishesTemplate);
+  renderMenu(1, "sides-template-output", getSidesTemplate);
+  renderMenu(2, "desserts-template-output", getDessertsTemplate);
 }
 
 function updateUI() {
@@ -11,30 +11,12 @@ function updateUI() {
   renderBasketDishes();
 }
 
-function renderDishes() {
-  let contentRef = document.getElementById("dishes-template-output");
+function renderMenu(categoryIndex, outputId, templateFunction) {
+  let contentRef = document.getElementById(outputId);
   contentRef.innerHTML = "";
 
-  for (let itemIndex = 0; itemIndex < russianMenu[0].items.length; itemIndex++) {
-    contentRef.innerHTML += getDishesTemplate(itemIndex);
-  }
-}
-
-function renderSides() {
-  let contentRef = document.getElementById("sides-template-output");
-  contentRef.innerHTML = "";
-
-  for (let itemIndex = 0; itemIndex < russianMenu[1].items.length; itemIndex++) {
-    contentRef.innerHTML += getSidesTemplate(itemIndex);
-  }
-}
-
-function renderDesserts() {
-  let contentRef = document.getElementById("deserts-template-output");
-  contentRef.innerHTML = "";
-
-  for (let itemIndex = 0; itemIndex < russianMenu[2].items.length; itemIndex++) {
-    contentRef.innerHTML += getDessertsTemplate(itemIndex);
+  for (let itemIndex = 0; itemIndex < russianMenu[categoryIndex].items.length; itemIndex++) {
+    contentRef.innerHTML += templateFunction(itemIndex);
   }
 }
 
