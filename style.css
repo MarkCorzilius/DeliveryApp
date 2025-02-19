@@ -3,7 +3,7 @@
 }
 
 #content {
-  width: calc(100% -320px);
+  width: calc(100% - 320px);
   flex: 1;
   height: 100%;
 }
@@ -15,11 +15,11 @@
   margin-bottom: 40px;
 }
 
-.pancake-png {
+.pelmeni-png {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 160px;
+  top: 136px;
   display: flex;
   height: 104px;
   width: auto;
@@ -131,10 +131,12 @@
 .dish-price {
   color: rgb(255 139 0);
   font-size: 20px;
+  padding-top: 16px;
 }
 
 .dish-name {
   font-size: 24px;
+  font-weight: 700;
 }
 
 .dish-description {

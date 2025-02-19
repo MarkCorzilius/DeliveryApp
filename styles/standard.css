@@ -40,10 +40,10 @@ header {
   justify-content: left;
   padding-left: 32px;
   gap: 16px;
-  height: 144px;
+  height: 120px;
   width: 100%;
-  z-index: 100;
   background-color: rgb(255 139 0);
+  z-index: 20 !important;
 }
 
 footer {

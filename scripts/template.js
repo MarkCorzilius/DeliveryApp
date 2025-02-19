@@ -99,7 +99,7 @@ function getPriceSummaryTemplate() {
     </div>
   </div>
   <div class="d-grid gap-2">
-  <button class="btn btn-primary" id="paymentBtn" type="button">payment</button>
+  <button class="btn btn-primary" id="btn" type="button">payment</button>
 </div>
 </div>`;
 }

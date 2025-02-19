@@ -134,3 +134,38 @@ function changePortionAmount(index, action) {
   }
   updateUI();
 }
+
+function toggleBasketOverlay() {
+  let basketRef = document.getElementById("basket-wrapper");
+
+  if (basketRef.style.display == "block") {
+    basketRef.style.display = "none";
+    document.body.style.overflow = "auto"; // Aktiviert Scrollen wieder
+  } else {
+    basketRef.style.display = "block";
+    document.body.style.overflow = "hidden"; // Verhindert Scrollen
+  }
+
+  toggleBasketButton();
+}
+
+function toggleBasketButton() {
+  let buttonRef = document.getElementById("mobile-footer-basket");
+
+  if (buttonRef.classList.contains("mobile-footer-basket")) {
+    buttonRef.classList.replace("mobile-footer-basket", "footer-basket-opened");
+  } else buttonRef.classList.replace("footer-basket-opened", "mobile-footer-basket");
+}
+
+function adjustBasketWidth() {
+  let basketRef = document.getElementById("basket-wrapper");
+  let buttonRef = document.getElementById("mobile-footer-basket");
+
+  if (window.innerWidth > 991.98) {
+    basketRef.style.display = "block";
+    buttonRef.classList.replace("footer_basket_opened", "mobile-footer-basket");
+  }
+  if (window.innerWidth == 991.98) {
+    basketRef.style.display = "none";
+  }
+}
