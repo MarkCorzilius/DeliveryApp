@@ -1,5 +1,9 @@
+let basketTotalCount = 0;
+
 let subtotalCost = 0;
+
 let deliveryCost = 5;
+
 let totalCost = 0;
 
 let russianMenu = [

@@ -44,6 +44,8 @@ header {
   width: 100%;
   background-color: rgb(255 139 0);
   z-index: 20 !important;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 footer {

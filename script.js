@@ -57,6 +57,7 @@ function addPortion(categoryIndex, itemIndex) {
   }
 
   updateUI();
+  showBasketItemCount();
 }
 
 function isAllAmountZero() {
@@ -119,6 +120,7 @@ function calcSummaryPrices() {
 function deleteAllPortions(index) {
   basket[index].amount = 0;
   updateUI();
+  showBasketItemCount();
 }
 
 function changePortionAmount(index, action) {
@@ -133,6 +135,7 @@ function changePortionAmount(index, action) {
       break;
   }
   updateUI();
+  showBasketItemCount();
 }
 
 function toggleBasketOverlay() {
@@ -168,4 +171,35 @@ function adjustBasketWidth() {
   if (window.innerWidth == 991.98) {
     basketRef.style.display = "none";
   }
+}
+
+function openOverlay() {
+  document.getElementById("overlay").style.display = "block";
+  clearBasket();
+}
+
+function closeOverlay() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+function showBasketItemCount() {
+  basketTotalCount = 0;
+  let contentRef = document.getElementById("basket-count");
+  contentRef.innerHTML = "";
+
+  for (let mealIndex = 0; mealIndex < basket.length; mealIndex++) {
+    let meal = basket[mealIndex];
+    basketTotalCount += meal.amount;
+  }
+  contentRef.innerHTML = `<p>[ You have <strong class="basket-meals-total">${basketTotalCount}</strong> meals in your basket ] </p>`;
+  updateUI();
+}
+
+function clearBasket() {
+  for (let mealIndex = 0; mealIndex < basket.length; mealIndex++) {
+    let meal = basket[mealIndex];
+    meal.amount = 0;
+  }
+  updateUI();
+  showBasketItemCount();
 }

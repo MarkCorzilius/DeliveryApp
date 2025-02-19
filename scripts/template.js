@@ -98,8 +98,6 @@ function getPriceSummaryTemplate() {
       <p>${formatPrice(totalCost) + "€"}</p>
     </div>
   </div>
-  <div class="d-grid gap-2">
-  <button class="btn btn-primary" id="btn" type="button">payment</button>
-</div>
+  <button class="payment-btn" onclick="openOverlay()" type="button">payment</button>
 </div>`;
 }
