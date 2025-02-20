@@ -5,7 +5,10 @@
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (min-width: 991.99px) {
+  #basket-wrapper {
+    display: block !important;
+  }
 }
 
 @media (max-width: 991.98px) {

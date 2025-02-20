@@ -142,19 +142,6 @@ function toggleBasketButton() {
   } else buttonRef.classList.replace("footer-basket-opened", "mobile-footer-basket");
 }
 
-function adjustBasketWidth() {
-  let basketRef = document.getElementById("basket-wrapper");
-  let buttonRef = document.getElementById("mobile-footer-basket");
-
-  if (window.innerWidth > 991.98) {
-    basketRef.style.display = "block";
-    buttonRef.classList.replace("footer_basket_opened", "mobile-footer-basket");
-  }
-  if (window.innerWidth == 991.98) {
-    basketRef.style.display = "none";
-  }
-}
-
 function openOverlay() {
   document.getElementById("overlay").style.display = "block";
   clearBasket();
